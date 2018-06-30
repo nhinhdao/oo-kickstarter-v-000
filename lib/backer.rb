@@ -6,11 +6,11 @@ class Backer
         @name = name
         @backed_projects = []
     end
-    
+
     def back_project(project)
         # binding.pry
-        @@backed_projects << project
-        project.add_backer(self)
+        @backed_projects << project
+        project.backers << self
     end
 
     def backed_projects
